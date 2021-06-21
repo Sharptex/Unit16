@@ -24,7 +24,14 @@ namespace Unit16.Tests
         public void Miltiplication_MustReturnCorrectValue()
         {
             var calculator = new Calculator();
-            Assert.That(calculator.Miltiplication(10, -25) == -250);
+            Assert.That(calculator.Miltiplication(10, 25) == 250);
+        }
+
+        [Test]
+        public void Miltiplication_MustReturnNegativeValue()
+        {
+            var calculator = new Calculator();
+            Assert.That(calculator.Miltiplication(20, -2) < 0);
         }
 
         [Test]
@@ -32,6 +39,13 @@ namespace Unit16.Tests
         {
             var calculator = new Calculator();
             Assert.That(calculator.Division(300, 11) == 27);
+        }
+
+        [Test]
+        public void Division_MustReturnNegativeValue()
+        {
+            var calculator = new Calculator();
+            Assert.That(calculator.Division(-200, 50) < 0);
         }
 
         [Test]
